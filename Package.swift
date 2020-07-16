@@ -8,7 +8,6 @@ let package = Package(
 	],
 	products: [
 		.library(name: "ErrorBacktrace", targets: ["ErrorBacktrace"]),
-		.library(name: "CErrorBacktrace", targets: ["CErrorBacktrace"]),
 		.executable(name: "example", targets: ["example"]),
 	],
 	dependencies: [
@@ -20,6 +19,5 @@ let package = Package(
 			"ErrorBacktrace",
 			.product(name: "ArgumentParser", package: "swift-argument-parser")
 			]),
-		.target(name: "CErrorBacktrace"),
 	]
 )
