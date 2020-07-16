@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
 	name: "swift-error-backtrace",
 	platforms: [
-		.macOS(.v10_12),
+		.macOS(.v10_13),
 	],
 	products: [
 		.library(name: "ErrorBacktrace", targets: ["ErrorBacktrace"]),
@@ -14,7 +14,7 @@ let package = Package(
 		.package(url: "https://github.com/apple/swift-argument-parser", from: "0.0.1"),
 	],
 	targets: [
-		.target(name: "ErrorBacktrace", swiftSettings: [.define("UNSAFE_DEMANGLE")]),
+		.target(name: "ErrorBacktrace"),
 		.target(name: "example", dependencies: [
 			"ErrorBacktrace",
 			.product(name: "ArgumentParser", package: "swift-argument-parser")
