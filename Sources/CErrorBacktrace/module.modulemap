@@ -1,0 +1,4 @@
+module backtrace3 {
+	header "include/backtrace3.h"
+	export *
+}
